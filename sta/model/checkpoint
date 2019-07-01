@@ -1,0 +1,2 @@
+model_checkpoint_path: "best-hier-mmd-2"
+all_model_checkpoint_paths: "best-hier-mmd-2"
