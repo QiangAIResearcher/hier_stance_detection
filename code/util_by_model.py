@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from feature_engineering import *
-
+import numpy as np
 
 # Initialise global variables
 label_ref = {'agree': 0, 'disagree': 1, 'discuss': 2, 'unrelated': 3}
@@ -342,9 +342,7 @@ def pipeline_test(test, bow_vectorizer, tfreq_vectorizer, tfidf_vectorizer, m):
     test_set = np.asarray(test_set)
     test_set = (test_set-m)#/(std+0.0001)
 
-    return test_set,test_stance,test_stance_idx,\
-           test_relatedness,test_relatedness_false, \
-           mmd_symbol,mmd_symbol_
+    return test_set,test_stance,test_stance_idx
 
 
 def save_predictions(pred, file):

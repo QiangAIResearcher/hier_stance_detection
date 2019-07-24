@@ -46,9 +46,7 @@ train_relatedness,train_relatedness_false,\
 bow_vectorizer,tfreq_vectorizer,tfidf_vectorizer,mmd_symbol,mmd_symbol_ = \
     pipeline_train(raw_train, raw_test, lim_unigram=lim_unigram)
 
-test_set,test_stance,test_stance_idx,\
-test_relatedness,test_relatedness_false,\
-test_mmd_sym, test_mmd_sym_ = \
+test_set,test_stance,test_stance_idx= \
     pipeline_test(raw_test, bow_vectorizer, tfreq_vectorizer, tfidf_vectorizer, train_mean)
 
 n_train = len(train_set)
